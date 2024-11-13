@@ -1,8 +1,40 @@
-﻿namespace HotelOpgaveBirk {
+﻿using System.Data.SqlClient;
+
+namespace HotelOpgaveBirk {
     internal class Program {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB_New;Initial Catalog = HotelDB; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent = ReadWrite; MultiSubnetFailover=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            Facility facility = new Facility();
+            facility.Name = "Tennis";
+            CRUD crud = new CRUD();
+            //Create facility
+            //crud.CreateFacility(connection, facility);
+            //readfacility
+            //Console.WriteLine( crud.ReadFacility(connection, 6));
+            //read all facilities
+            //crud.ReadAllFacilites(connection);
+
+            //facility.Name = "Tennis med bold";
+            //facility.Facility_Id = 6;
+            ////Update facilities
+            //crud.UpdateFacility(connection, facility);
+
+            //DELETE facility
+
+            //crud.DeleteFacility(connection, 6);
+
+
+            //tilføj facilitet til et hotel:
+            //crud.AddFacilityToHotel(connection, 4, 7);
+
+            //se hvilke faciliteter et hotel har:
+            //crud.Hotelfacilities(connection, 3);
+
+            //Se hvilke hoteller har en swimmingpool
+
+            crud.HotelsWithFacility(connection, 4);
         }
     }
 }
