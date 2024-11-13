@@ -6,6 +6,8 @@ namespace HotelOpgaveBirk {
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB_New;Initial Catalog = HotelDB; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent = ReadWrite; MultiSubnetFailover=False";
             SqlConnection connection = new SqlConnection(connectionString);
+
+
             Facility facility = new Facility();
             facility.Name = "Tennis";
             CRUD crud = new CRUD();
