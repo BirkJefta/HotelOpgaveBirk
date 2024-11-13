@@ -4,7 +4,7 @@ namespace HotelOpgaveBirk {
     internal class Program {
         static void Main(string[] args)
         {
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB_New;Initial Catalog = HotelDB; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent = ReadWrite; MultiSubnetFailover=False";
+            string connectionString = @"";
             SqlConnection connection = new SqlConnection(connectionString);
 
 
