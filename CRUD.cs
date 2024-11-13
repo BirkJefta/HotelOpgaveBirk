@@ -189,11 +189,10 @@ namespace HotelOpgaveBirk {
             //hvis der ingen værdier er med hotel nummeret
             if (!reader.HasRows)
             {
-                //End here
+                //
                 Console.WriteLine("Ingen hoteller med id eller hotellet har ingen faciliteter");
                 reader.Close();
 
-                //Return null for 'no hotels found'
 
             }
             else
@@ -231,9 +230,6 @@ namespace HotelOpgaveBirk {
         public void HotelsWithFacility(SqlConnection connection, int Facility_Id)
         {
             Console.WriteLine();
-            //vælger facilitet id og navn samt hotellets navn.
-            //Joiner dem sammen så jeg får navnet med når jeg henter id i hotelfacilities.
-            //where til at bestemme hvilket hotel det passer til
             string SQLCommandString = $"SELECT Hotel.Name AS HotelName, Facility.Facility_Id, Facility.Name\r\nFROM Facility\r\nINNER Join HotelFacility ON HotelFacility.Facility_Id = Facility.Facility_Id\r\nINNER JOIN Hotel ON Hotel.Hotel_No = HotelFacility.Hotel_No\r\nWHERE HotelFacility.Facility_Id = {Facility_Id};";
             Console.WriteLine(SQLCommandString);
 
@@ -249,11 +245,10 @@ namespace HotelOpgaveBirk {
             //hvis der ingen værdier er med hotel nummeret
             if (!reader.HasRows)
             {
-                //End here
                 Console.WriteLine("Ingen hoteller med id eller ingen hoteller med indtastede facilitet ");
                 reader.Close();
 
-                //Return null for 'no hotels found'
+                
 
             }
             else
