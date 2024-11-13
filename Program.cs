@@ -9,19 +9,20 @@ namespace HotelOpgaveBirk {
             Facility facility = new Facility();
             facility.Name = "Tennis";
             CRUD crud = new CRUD();
-            //Create facility
+            //Create facility (C)
             //crud.CreateFacility(connection, facility);
-            //readfacility
+
+            //readfacility (R)
             //Console.WriteLine( crud.ReadFacility(connection, 6));
             //read all facilities
             //crud.ReadAllFacilites(connection);
 
             //facility.Name = "Tennis med bold";
             //facility.Facility_Id = 6;
-            ////Update facilities
+            ////Update facilities (U)
             //crud.UpdateFacility(connection, facility);
 
-            //DELETE facility
+            //DELETE facility (D)
 
             //crud.DeleteFacility(connection, 6);
 
@@ -34,7 +35,7 @@ namespace HotelOpgaveBirk {
 
             //Se hvilke hoteller har en swimmingpool
 
-            crud.HotelsWithFacility(connection, 4);
+            //crud.HotelsWithFacility(connection, 4);
         }
     }
 }
